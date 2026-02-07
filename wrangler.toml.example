@@ -1,0 +1,29 @@
+# This is an example wrangler.toml file.
+# You should create a wrangler.toml file and fill it with your own values.
+
+name = "your-project-name" # The name of your Cloudflare Pages project
+main = "./dist/server/entry.mjs" # The entry point for your server
+compatibility_date = "2023-10-30"
+
+# D1 Database Binding
+# -------------------
+# To connect your Astro application to a Cloudflare D1 database,
+# you need to create a "binding" here. A binding is a link
+# that allows your code to access a Cloudflare resource.
+#
+# 1. 'binding' field: This is the name your code will use to
+#    access the database. In our Astro API route
+#    (src/pages/api/book.ts), we use `locals.runtime.env.D1_DB`,
+#    so the binding name MUST be "D1_DB".
+#
+# 2. 'database_name' field: This is the name of your D1 database
+#    as it appears in your Cloudflare dashboard.
+#
+# 3. 'database_id' field: This is the unique ID of your D1 database.
+#    You can find this in your Cloudflare dashboard or by using
+#    the `wrangler d1 list` command.
+
+[[d1_databases]]
+binding = "D1_DB" # Must match the name used in your Astro code
+database_name = "your-database-name"
+database_id = "your-database-id"
