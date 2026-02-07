@@ -1,0 +1,9 @@
+import{r as d}from"./index.DiEladB3.js";var c={exports:{}},l={};/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var x;function p(){if(x)return l;x=1;var r=Symbol.for("react.transitional.element"),u=Symbol.for("react.fragment");function i(s,t,e){var o=null;if(e!==void 0&&(o=""+e),t.key!==void 0&&(o=""+t.key),"key"in t){e={};for(var n in t)n!=="key"&&(e[n]=t[n])}else e=t;return t=e.ref,{$$typeof:r,type:s,key:o,ref:t!==void 0?t:null,props:e}}return l.Fragment=u,l.jsx=i,l.jsxs=i,l}var m;function f(){return m||(m=1,c.exports=p()),c.exports}var a=f();const h=()=>{const[r,u]=d.useState(new Date),[i,s]=d.useState(""),t=async()=>{s("Booking...");try{const e={userId:1,serviceId:1,startTime:new Date(r.getTime()-r.getTimezoneOffset()*6e4).toISOString().slice(0,19).replace("T"," "),endTime:new Date(r.getTime()-r.getTimezoneOffset()*6e4+18e5).toISOString().slice(0,19).replace("T"," ")},o=await fetch("/api/book",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(e)}),n=await o.json();o.ok?s(`Success: ${n.message}`):s(`Error: ${n.error}`)}catch(e){console.error("Booking failed:",e),s("Error: Could not connect to the server.")}};return a.jsxs("div",{className:"p-4 border rounded-lg max-w-md mx-auto",children:[a.jsx("h2",{className:"text-2xl font-bold text-center mb-4",children:"Book an Appointment"}),a.jsxs("div",{className:"flex flex-col items-center",children:[a.jsx("input",{type:"datetime-local",value:r.toISOString().substring(0,16),onChange:e=>u(new Date(e.target.value)),className:"p-2 border rounded mb-4"}),a.jsx("button",{onClick:t,className:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",children:"Book Now"}),i&&a.jsx("p",{className:"mt-4 text-center",children:i})]})]})};export{h as default};
