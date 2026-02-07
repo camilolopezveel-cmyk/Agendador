@@ -4,6 +4,7 @@
 name = "agendador" # The name of your Cloudflare Pages project
 main = "./dist/server/entry.mjs" # The entry point for your server
 compatibility_date = "2023-10-30"
+pages_build_output_dir = "dist"
 
 # D1 Database Binding
 # -------------------
