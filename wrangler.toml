@@ -1,8 +1,7 @@
 # This is an example wrangler.toml file.
 # You should create a wrangler.toml file and fill it with your own values.
 
-name = "agendador" # The name of your Cloudflare Pages project
-main = "./dist/server/entry.mjs" # The entry point for your server
+name = "agendador" 
 compatibility_date = "2023-10-30"
 pages_build_output_dir = "dist"
 
